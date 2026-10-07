@@ -1,0 +1,39 @@
+---
+title: Publications
+description: Publications from the Sham lab on pneumococcal capsule synthesis, cell envelope assembly, glycoengineering and dual Tn-seq.
+redirect_from:
+  - /publication.html
+---
+{% include page-head.html eyebrow="Publications" title="Papers" lede="Selected papers from the lab. Lab members are in bold. For a complete list, see Chris Sham's Google Scholar profile." seed=11 %}
+{% assign years = site.data.publications.lab | group_by: "year" %}
+<section class="section" data-pubs>
+  <div class="wrap">
+    <div class="pub-tools">
+      <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+        <span class="sr-only">Search publications</span><input type="search" placeholder="Search titles, authors, journals…" autocomplete="off"></label>
+      <a class="btn btn-ghost" href="{{ site.scholar }}">Google Scholar <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+    <div class="filters" role="group" aria-label="Filter by topic" style="margin-bottom:22px">
+      <button class="filter" type="button" data-topic="all" aria-pressed="true">All</button>
+      {% for t in site.data.publications.topics %}<button class="filter" type="button" data-topic="{{ t[0] }}" aria-pressed="false">{{ t[1] }}</button>{% endfor %}
+      <button class="filter" type="button" data-topic="earlier" aria-pressed="false">Before NUS</button>
+    </div>
+    <p class="pub-count" aria-live="polite"></p>
+    {% for y in years %}
+    <div class="year-group">
+      <div class="year-label">{{ y.name }}</div>
+      <ul class="pubs">{% for p in y.items %}{% include pub.html pub=p %}{% endfor %}</ul>
+    </div>
+    {% endfor %}
+    <h2 style="margin:54px 0 6px">Before the lab</h2>
+    <p class="muted" style="max-width:64ch">Selected earlier work by Chris Sham on bacterial cell wall synthesis and cell division. Links search PubMed by title.</p>
+    {% assign eyears = site.data.publications.earlier | group_by: "year" %}
+    {% for y in eyears %}
+    <div class="year-group">
+      <div class="year-label">{{ y.name }}</div>
+      <ul class="pubs">{% for p in y.items %}{% include pub.html pub=p earlier=true %}{% endfor %}</ul>
+    </div>
+    {% endfor %}
+    <p class="empty">No papers match that search.</p>
+  </div>
+</section>

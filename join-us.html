@@ -1,355 +1,39 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chris Sham Lab</title>
-    <link rel="shortcut icon" href="favicon.ico" type="vnd.microsoft.icon">
-    <link rel="stylesheet" href="v5.0.2.css" type="text/css" />
-    <link rel="stylesheet" href="css/styleguide.css" type="text/css" />
-    <link rel="stylesheet" href="font-awesome.min.css" type="text/css" />
-    <link rel="stylesheet" href="css/join-us.css" type="text/css">
-    <script src="v5.0.2.js" type="text/javascript"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1546804-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'UA-1546804-1');
-    </script>
-  </head>
-  <body>
-    <!-- SIDEBAR - OFF CANVAS - START -->
-    <div id="nus-sidebar-off-canvas" class="nus-sidebar-off-canvas offcanvas offcanvas-end flex-shrink-0" tabindex="-1" aria-labelledby="nus-sidebar-off-canvas">
-      <div class="header offcanvas-header">
-        <h5 class="offcanvas-title">Sidebar</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="body offcanvas-body">
-        <div class="nus-module module_menu">
-          <div class="module-inner">
-            <h3 class="title">
-              <span>Main Menu</span>
-            </h3>
-            <div class="module-ct">
-              <ul class="list-unstyled ps-0">
-                <li class="mb-1">
-                  <a href="index.html" class="mnu-lvl-1 btn align-items-center">Home</a>
-                </li>
-                <li class="mb-1">
-                  <a href="research.html" class="mnu-lvl-1 btn align-items-center d-inline-block w-75">Research</a>
-                </li> 
-                <li class="mb-1">
-                  <a href="people.html" class="mnu-lvl-1 btn align-items-center d-inline-block w-75">People</a>
-                </li>
-
-                <li class="mb-1">
-                  <a href="publication.html" class="mnu-lvl-1 btn align-items-center">Publication</a>
-                </li>                
-                <li class="mb-1">
-                  <a href="gallery.html" class="mnu-lvl-1 btn align-items-center">Gallery</a>
-                </li>
-		<li class="mb-1">
-                  <a href="join-us.html" class="mnu-lvl-1 btn align-items-center">Join Us</a>
-                </li>  
-                <li class="mb-1">
-                  <a href="contact.html" class="mnu-lvl-1 btn align-items-center">Contact Us</a>
-                </li>                
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+---
+title: Join us
+description: Open positions in the Sham lab at NUS for research fellows, research assistants and students.
+---
+{% include page-head.html eyebrow="Join us" title="Work with us" lede="We welcome highly motivated postdoctoral fellows, research staff and students. If you are curious about how bacteria build their surfaces, get in touch." seed=31 %}
+<section class="section">
+  <div class="wrap split">
+    <div>
+      {% for p in site.data.positions %}{% if p.open %}
+      <article class="position">
+        <h3>{{ p.title }} <span class="chip">Open</span></h3>
+        <p class="muted">{{ p.body }}</p>
+        {% if p.requirements %}<p class="mono" style="font-size:13px;margin:14px 0 0">Requirements</p>
+        <ul>{% for r in p.requirements %}<li>{{ r }}</li>{% endfor %}</ul>{% endif %}
+      </article>
+      {% endif %}{% endfor %}
     </div>
-    <!-- SIDEBAR MOBILE - OFF CANVAS - END -->
-    <div class="nus-body-container">
-      <div class="nus-wrapper">
-        <!-- HEADER -->
-        <header class="nus-header">
-          <!-- set class='microsite' to get #eee background. -->
-          <div class="container-lg">
-            <div class="row justify-content-evenly">
-              <!-- LOGO SECTION - START -->
-              <div class="col nus-logo">
-                <div class="d-flex flex-row">
-                  <!-- NUS LOGO -->
-                  <div>
-                    <a class="navbar-brand" href="//www.nus.edu.sg">
-                      <img src="icon-logo/logo.png" alt="NUS" />
-                    </a>
-                  </div>
-                  <!-- BORDER , .nus-dcnm (set own height and margin border CSS in template.css -->
-                  <div class="nus-faculty-border nus-dcnm">&nbsp;</div>
-                  <!-- FACULTY SUB-LOGO -->
-                  <div class="trial123">
-                    <a href="https://medicine.nus.edu.sg/mbio/index.html">
-                      <img src="icon-logo/dept-sublogo5.png" alt="SubLogo" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- LOGO SECTION - END -->
-              <div class="col d-none d-lg-block">
-                <!-- QUICKLINKS -->
-                <div class="nus-quicklinks">
-                  <ul class="box nav nav-pills">
-                    <li>
-                      <a href="https://news.nus.edu.sg/">News</a>
-                    </li>
-                    <li>
-                      <a href="https://libportal.nus.edu.sg/frontend/index">Library</a>
-                    </li>
-                    <li>
-                      <a href="https://myportal.nus.edu.sg/studentportal/alerts/all/">Student</a>
-                    </li>
-					<li>
-                      <a href="https://www.nus.edu.sg/inside-nus">Staff</a>
-                    </li>
-                  </ul>
-                </div>
-                <!-- //QUICKLINKS -->
-              </div>
-              <!-- SEARCH & BURGER Mobile-->
-              <div class="col nus-mobile-nav d-block d-lg-none">
-                <ul>
-                  <li>
-                    <a class="faicon fa-search collapsed" data-bs-toggle="collapse" href="#search-collapse" aria-expanded="false" aria-controls="search-collapse">&nbsp;</a>
-                  </li>
-                  <li>
-                    <a class="faicon fa-mobile-menu btn-toggle off-canvas-toggle" data-bs-toggle="offcanvas" href="#nus-sidebar-off-canvas">&nbsp;</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-        </header>
-        <!-- //HEADER -->
-        <!-- MAIN NAVIGATION Desktop-->
-        <nav class="navbar navbar-expand-lg nus-main-nav d-none d-lg-flex">
-          <div class="container-lg">
-            <!-- MAIN MENU - NUS - START -->
-            <div class="nus-megamenu d-none d-md-block ">
-              <ul class="nav navbar-nav level0">
-                <li>
-                  <a class="" href="index.html" data-target="#">Home</a>
-                </li>
-                <li data-id="113" data-level="1">
-                  <a class="" href="research.html" data-target="#">Research</a>
-				</li>
-                <li data-id="114" data-level="1">
-                  <a class="" href="people.html" data-target="#">People</a>
-                </li>
-                <li data-id="115" data-level="1">
-                  <a class="" href="publication.html" data-target="#">Publication</a>
-                </li>
-                <li data-id="116" data-level="1">
-                  <a class="" href="gallery.html" data-target="#">Gallery</a>
-                </li>
-				<li class="current active" data-id="117" data-level="1">
-                  <a class="" href="join-us.html" data-target="#">Join Us</a>
-                </li>
-                <li data-id="118" data-level="1">
-                  <a class="" href="contact.html" data-target="#">Contact</a>
-                </li>
-              </ul>
-            </div>
-            <!-- MAIN MENU - NUS - END -->
-            <!-- SEARCH BUTTON ICON Desktop - START -->
-            <div class="search-btn-box d-none d-lg-block">
-              <a class="faicon fa-search collapsed" data-bs-toggle="collapse" href="#search-collapse" aria-expanded="false" aria-controls="search-collapse">&nbsp;</a>
-            </div>
-            <!-- SEARCH BUTTON ICON - END -->
-          </div>
-        </nav>
-        <!-- //MAIN NAVIGATION -->
-        <!-- SEARCH FORM Collapse-->
-        <div id="search-collapse" class="nus-search-box collapse">
-          <div class="container-lg py-3">
-            <div class="search">
-              <form action="https://www.google.com/search" method="get" class="form-inline form-search">
-                <input name="q" id="mod-search-searchword" class="form-control input-lg" type="text" placeholder="Search...">
-                <input type="hidden" name="domains" value="nus.edu.sg" />
-                <input type="hidden" name="sitesearch" value="nus.edu.sg" />
-              </form>
-            </div>
-          </div>
-        </div>
-        <!-- NUS SEARCH - ENDS -->
-
-        
-        <!-- CONTENT - START -->
-	<!--
-        <div class="nus-banner">
-          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-		<div class="banner-image"></div>
-          </div>
-        </div>
-	-->
-
-<div class="banner">
-	<img src="banner-image/banner-std-3.png" width="100%" height="auto" alt"">
-</div>
-    
-<!--This section to list down the lab publication-->
-<div class="container">
-	<div class="join-us">
-	<h5>Join Us!</h5>
-	<p style="margin-left: 10px; margin-right: 10px">We welcome highly motivated and talented postdoctoral fellows, research staff, and students.<br>
-	Please contact Dr. Chris Sham (lsham@nus.edu.sg) if you are interested.
-	</p>
-	</div>
-
-	<div class="research-fellow">
-		<h10>Research Fellow</h10>
-		<p>
-			A competitive compensation package will be provided based on experience and track record. 
-			Interested candidates should submit a curriculum vitae and contact information for three referees to Dr. Chris Sham (lsham@nus.edu.sg). 
-			Please note that only shortlisted candidates will be notified.
-		</p>
-		<h15>Requirements</h15>
-		<div class="requirement-list">
-		<li>Ph.D. in Microbiology or related fields</li>
-		<li>Excellent written and oral communication skills in English</li>
-		<li>Highly motivated, self-driven, and independent</li>
-		<li>Interested in science and be able to work well in a team</li>
-		<li>Prior experience with next-generation sequencing, animal studies, immunology, molecular biology, and/or bacteriology is preferred</li>
-		</div>
-	</div>
-	
-	<div class="research-fellow">
-		<h10>Research Assistant</h10>
-		<p>
-			A research assistant position is available in Chris Sham’s laboratory. 
-			The candidate will investigate topics related to capsule biogenesis and host-pathogen interaction. 
-			This research program is supported by a vibrant research environment and state-of-the-art facilities in the laboratory and the Department of Microbiology and Immunology. 
-			Based on the candidate’s experience and track record, a competitive compensation package will be provided. 
-			Interested candidates should submit a curriculum vitae and contact information for three referees to Dr. Chris Sham (miclts@nus.edu.sg). 
-			Please note that only shortlisted candidates will be notified.</p>
-		<h15>Requirements</h15>
-		<div class="requirement-list">
-		<li>B.Sc. or higher degrees in Microbiology or related fields</li>
-		<li>Excellent written and oral communication skills in English</li>
-		<li>Highly motivated, self-driven, and independent</li>
-		<li>Interested in science and be able to work well in a team</li>
-		<li>Prior experience with animal studies, vaccinology, and/or bacteriology preferred</li>
-		</div>
-	</div>
-	
-	<div class="students">
-		<h10>UROPS / Final Year Project / Research Attachment / Internship Students</h10>
-		<p>Are you interested in joining our team? If so, please contact Dr. Chris Sham (lsham@nus.edu.sg) or drop by his office to discuss your ideas.</p>
-		&nbsp;
-	</div>
-</div>
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-        <!-- CONTENT - END -->
-        <!-- NUS BREADCRUMBS - START -->
-        <div class="nus-breadcrumbs">
-          <div class="container-lg">
-            <ul>
-              <li>
-		<span class="icon faicon fa-location"></span>
-                <a href="index.html">Home</a>
-              </li>
-              <li>Join Us</li>
-            </ul>
-          </div>
-        </div>
-        <!-- NUS BREADCRUMBS - END -->
-        <!-- FOOTER - START -->
-        <footer class="nus-footer">
-          <!-- FOOT NAVIGATION - START -->
-          <div class="container-lg">
-            <div class="row wrapper navigator">
-              <div class="text-center">
-                <div class="nus-social-box">
-                  <div class="nus-module module">
-                    <div class="module-inner">
-                      <h3 class="title">
-                        <span>Bacterial Cell Envelope and Antibiotic Development (BCEAD) Laboratory</span>
-                      </h3>
-                      <div class="module-ct">
-                        <ul class="nus-contact-us">
-                          <li>
-                            <span class="icon faicon fa-address"></span>MD4 5 Science Drive 2  <br />Singapore 117545
-                          </li>
-                          <li>
-                            <span class="icon faicon fa-phone"></span>+65 6601 6356
-                          </li>
-                          <li>
-                            <span class="icon faicon fa-email"></span>
-                            <a href="mailto:xxx@nus.edu.sg">lsham@nus.edu.sg</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="nus-module module footnav-alt">
-                    <div class="module-inner">
-                      <div class="module-ct">
-                        <div>
-			<!--
-                          <a href="http://www.facebook.com/nus.singapore" target="_blank">
-                            <img src="facebook.png" alt="facebook" width="32" height="32">
-                          </a>&nbsp; <a href="http://twitter.com/NUSingapore" target="_blank">
-                            <img src="twitter.png" alt="twitter" width="32" height="32">
-                          </a>&nbsp; <a href="http://www.youtube.com/nuscast" target="_blank">
-                            <img src="youtube.png" alt="youtube" width="32" height="32">
-                          </a>
-			-->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- FOOT NAVIGATION - END -->
-          <!-- FOOTER - COPYRIGHT - START -->
-          <div class="copyright">
-            <div class="container-lg">
-              <div class="row">
-                <div class="info">&copy; <a href="http://www.nus.edu.sg/">National University of Singapore</a>. All Rights Reserved. </div>
-                <div>
-                  <ul class="nav-copyright">
-                    <li>
-                      <a href="http://www.nus.edu.sg/legal-information-notices">Legal</a>
-                    </li>
-                    <li class="bullet">
-                      <a href="#">Branding guidelines</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- FOOTER - COPYRIGHT - END -->
-        </footer>
-        <!-- FOOTER - END -->
+    <aside>
+      <div class="panel" style="position:sticky;top:90px">
+        <p class="eyebrow">How to apply</p>
+        <h3>Email Chris Sham</h3>
+        <p class="muted">Send your CV, a short note on what you'd like to work on, and contact details for three referees.</p>
+        <a class="btn btn-primary" href="mailto:{{ site.email }}?subject=Application%3A%20Sham%20lab">{{ site.email }}</a>
+        <p class="note" style="margin:16px 0 0">Students can also drop by the office in {{ site.address | first }}.</p>
       </div>
-      <!-- NUS WRAPPER -->
+    </aside>
+  </div>
+</section>
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head"><div><p class="eyebrow">What you'll learn</p><h2>Skills across the bench and the computer</h2></div></div>
+    <div class="grid grid-4">
+      <div class="card"><div class="card-body"><h3>Bacterial genetics</h3><p>Mutant construction, transposon libraries and genetic screens in <i>S. pneumoniae</i>.</p></div></div>
+      <div class="card"><div class="card-body"><h3>Functional genomics</h3><p>Tn-seq, dual Tn-seq and barcode sequencing, with the analysis to match.</p></div></div>
+      <div class="card"><div class="card-body"><h3>Glycobiology</h3><p>Capsule biosynthesis, enzyme specificity and glycoengineering.</p></div></div>
+      <div class="card"><div class="card-body"><h3>Cell biology</h3><p>Fluorescence microscopy of cell division and envelope assembly.</p></div></div>
     </div>
-    <!-- NUS BODY container-lg -->
-    <a name="footer"></a>
-  </body>
-</html>
+  </div>
+</section>

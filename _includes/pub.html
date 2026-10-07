@@ -1,0 +1,14 @@
+{% assign p = include.pub %}{% assign a = p.authors %}{% for n in site.data.publications.lab_authors %}{% assign b = '<b>' | append: n | append: '</b>' %}{% assign a = a | replace: n, b %}{% endfor %}
+{% if p.url %}{% assign link = p.url %}{% else %}{% assign q = p.title | strip_html | url_encode %}{% assign link = 'https://pubmed.ncbi.nlm.nih.gov/?term=' | append: q %}{% endif %}
+<li class="pub" data-topics="{{ p.topics | join: ' ' }}{% if include.earlier %} earlier{% endif %}">
+  <div>
+    <p class="pub-title"><a href="{{ link }}">{{ p.title }}</a></p>
+    <p class="pub-authors">{{ a }}</p>
+    <div class="pub-meta">
+      <span class="pub-journal">{{ p.journal }}</span>{% if p.details %}<span class="muted">{{ p.details }}</span>{% endif %}
+      {% for t in p.topics %}<span class="chip">{{ site.data.publications.topics[t] }}</span>{% endfor %}
+      {% if include.earlier %}<span class="chip plain">Before NUS</span>{% endif %}
+    </div>
+  </div>
+  {% if p.image %}<img class="pub-thumb" src="{{ p.image | relative_url }}" alt="" loading="lazy">{% endif %}
+</li>

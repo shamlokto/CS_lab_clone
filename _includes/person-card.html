@@ -1,0 +1,8 @@
+{% assign m = include.person %}
+{% if m.no_page %}{% if m.link %}<a class="person" href="{{ m.link }}">{% else %}<div class="person">{% endif %}{% else %}<a class="person" href="{{ m.url | relative_url }}">{% endif %}
+  <div class="person-photo"><img src="{{ m.photo | relative_url }}" alt="{{ m.name }}" loading="lazy"></div>
+  <p class="person-name">{{ m.name }}</p>
+  <p class="person-role">{{ m.role }}</p>
+  {% if m.years %}<p class="person-years">{{ m.years }}</p>{% endif %}
+  {% if m.now %}<p class="person-now">Now: {{ m.now }}</p>{% endif %}
+{% if m.no_page and m.link == nil %}</div>{% else %}</a>{% endif %}

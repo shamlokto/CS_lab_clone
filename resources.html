@@ -1,0 +1,31 @@
+---
+title: Tools & data
+description: Software, datasets and teaching material from the Sham lab, including the Dual Tn-seq Explorer and the Fundamentals primers.
+---
+{% include page-head.html eyebrow="Resources" title="Tools, data and teaching" lede="Software and datasets from our work, free to use, plus animated primers for teaching bacterial molecular biology." seed=23 %}
+<section class="section">
+  <div class="wrap">
+    <div class="grid grid-2">
+      {% for r in site.data.resources %}
+      <article class="card resource reveal">
+        <div class="card-body">
+          <span class="chip kind{% if r.kind == 'Teaching' %} warm{% endif %}">{{ r.kind }}</span>
+          <h3 style="margin-top:6px">{{ r.title }}</h3>
+          <p>{{ r.body }}</p>
+          {% if r.stats %}<div class="stats-row">{% for s in r.stats %}<span class="chip plain">{{ s }}</span>{% endfor %}</div>{% endif %}
+          <div class="links">{% for l in r.links %}<a href="{{ l.url }}">{{ l.label }} →</a>{% endfor %}</div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="feature" style="margin-top:72px">
+      <div class="feature-media"><img src="{{ '/assets/img/slides/gi-landscape.webp' | relative_url }}" alt="Scatter plot of about 890,000 genetic interactions from dual Tn-seq" loading="lazy"></div>
+      <div>
+        <p class="eyebrow">Data</p>
+        <h2>The dual Tn-seq dataset</h2>
+        <p>Gene-pair fitness scores for <i>S. pneumoniae</i> D39 from the 2025 <i>Science</i> paper are on Figshare: 894,694 gene-pair scores and annotations for 1,984 genes. The Dual Tn-seq Explorer loads these files directly.</p>
+        <a class="btn btn-ghost" href="https://doi.org/10.6084/m9.figshare.29382974.v1">Get the data <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>

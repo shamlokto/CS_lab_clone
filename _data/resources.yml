@@ -1,0 +1,26 @@
+# Tools, data and teaching material from the lab.
+- title: Dual Tn-seq Explorer
+  kind: Web app
+  body: Query and visualise genetic interactions from dual Tn-seq in <i>S. pneumoniae</i> D39. Scatter plots for any query gene, GI-profile correlation across ~1,500 genes, gene-pair detail and SVG export.
+  stats: ["894,694 gene pairs", "1,984 genes"]
+  links:
+    - { label: Code, url: https://github.com/shamlokto/dual-tnseq-explorer }
+    - { label: Data (Figshare), url: https://doi.org/10.6084/m9.figshare.29382974.v1 }
+    - { label: Paper, url: https://www.science.org/doi/10.1126/science.adt7685 }
+- title: PneumoGI
+  kind: Database
+  body: A genetic interaction network database for the pneumococcus, with network views and overlap comparisons between screens.
+  links:
+    - { label: Code, url: https://github.com/shamlokto/pneumo-gi-db }
+- title: Pooled-AF3 planner
+  kind: Web app
+  body: Plans pooled AlphaFold 3 screens for protein-protein interactions, based on Todor, Gross et al. 2025. Generates pools and job files for all-by-all or proteome-wide screens in <i>S. pneumoniae</i> D39W.
+  links:
+    - { label: Code, url: https://github.com/shamlokto/pooled-af3-webapp }
+- title: Fundamentals
+  kind: Teaching
+  body: Animated, click-through primers on bacterial molecular biology, from DNA replication and translation to cell division, CRISPR-Cas9 and Tn-seq.
+  stats: ["12 primers", "235 plates"]
+  links:
+    - { label: Open the primers, url: https://shamlokto.github.io/fundamentals/ }
+    - { label: Code, url: https://github.com/shamlokto/fundamentals }

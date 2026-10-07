@@ -1,650 +1,71 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chris Sham Lab</title>
-    <link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
-    <link rel="stylesheet" href="v5.0.2.css" type="text/css" />
-    <link rel="stylesheet" href="css/styleguide.css" type="text/css" />
-    <link rel="stylesheet" href="font-awesome.min.css" type="text/css" />
-    <link rel="stylesheet" href="css/research.css" type="text/css">
-    <script src="v5.0.2.js" type="text/javascript"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1546804-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
+---
+title: Research
+description: Capsule enzyme specificity, envelope assembly, glycan structure and function, and genome-wide genetic interaction mapping in Streptococcus pneumoniae.
+---
+{% include page-head.html eyebrow="Research" title="From single enzymes to whole-genome interaction maps" lede="We study how glycans on the bacterial surface shape disease and immunity, and use systems biology to find genetic weak points that could guide new drug screens. The aim is to answer basic questions in cell biology and turn the answers into ways to prevent and cure infection." %}
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'UA-1546804-1');
-    </script>
-  </head>
-  <body>
-    <!-- SIDEBAR - OFF CANVAS - START -->
-    <div id="nus-sidebar-off-canvas" class="nus-sidebar-off-canvas offcanvas offcanvas-end flex-shrink-0" tabindex="-1" aria-labelledby="nus-sidebar-off-canvas">
-      <div class="header offcanvas-header">
-        <h5 class="offcanvas-title">Sidebar</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="body offcanvas-body">
-        <div class="nus-module module_menu">
-          <div class="module-inner">
-            <h3 class="title">
-              <span>Main Menu</span>
-            </h3>
-            <div class="module-ct">
-              <ul class="list-unstyled ps-0">
-                <li class="mb-1">
-                  <a href="index.html" class="mnu-lvl-1 btn align-items-center">Home</a>
-                </li>
-                <li class="mb-1">
-                  <a href="research.html" class="mnu-lvl-1 btn align-items-center d-inline-block w-75">Research</a>
-                </li> 
-                <li class="mb-1">
-                  <a href="people.html" class="mnu-lvl-1 btn align-items-center d-inline-block w-75">People</a>
-                </li>
-                <li class="mb-1">
-                  <a href="publication.html" class="mnu-lvl-1 btn align-items-center">Publication</a>
-                </li>                
-                <li class="mb-1">
-                  <a href="gallery.html" class="mnu-lvl-1 btn align-items-center">Gallery</a>
-                </li>
-				 <li class="mb-1">
-                  <a href="join-us.html" class="mnu-lvl-1 btn align-items-center">Join Us</a>
-                </li>     
-                <li class="mb-1">
-                  <a href="contact.html" class="mnu-lvl-1 btn align-items-center">Contact</a>
-                </li>                
-              </ul>
-            </div>
-          </div>
-        </div>
+<section class="section" style="padding-bottom:30px">
+  <div class="wrap">
+    <div class="grid grid-4">
+      {% for t in site.data.research.themes %}
+      <a class="card theme-card" href="#{{ t.id }}">
+        <div class="card-body"><span class="code">{{ t.code }}</span><h3 style="font-size:19px">{{ t.title }}</h3></div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% for t in site.data.research.themes %}
+<section class="section{% cycle '', ' alt' %}" id="{{ t.id }}" style="scroll-margin-top:70px">
+  <div class="wrap">
+    <div class="feature{% cycle '', ' flip' %}">
+      <div class="feature-media reveal"><img src="{{ t.image | relative_url }}" alt="{{ t.alt }}" loading="lazy"></div>
+      <div class="reveal">
+        <p class="eyebrow">Theme {{ t.code }}</p>
+        <h2>{{ t.title }}</h2>
+        <p>{{ t.body }}</p>
+        {% assign rel = site.data.publications.lab | where_exp: "p", "p.topics contains t.id" %}
+        {% if rel.size > 0 %}<p class="mono" style="font-size:13px;margin:18px 0 6px;color:var(--muted)">Related papers</p>
+        <ul style="margin:0;padding-left:18px;font-size:15px">
+          {% for p in rel limit: 3 %}<li style="margin:4px 0"><a href="{{ p.url }}">{{ p.title }}</a> <span class="muted">({{ p.journal }}, {{ p.year }})</span></li>{% endfor %}
+        </ul>{% endif %}
       </div>
     </div>
-    <!-- SIDEBAR MOBILE - OFF CANVAS - END -->
-    <div class="nus-body-container">
-      <div class="nus-wrapper">
-        <!-- HEADER -->
-        <header class="nus-header">
-          <!-- set class='microsite' to get #eee background. -->
-          <div class="container-lg">
-            <div class="row justify-content-evenly">
-              <!-- LOGO SECTION - START -->
-              <div class="col nus-logo">
-                <div class="d-flex flex-row">
-                  <!-- NUS LOGO -->
-                  <div>
-                    <a class="navbar-brand" href="//www.nus.edu.sg">
-                      <img src="icon-logo/logo.png" alt="NUS" />
-                    </a>
-                  </div>
-                  <!-- BORDER , .nus-dcnm (set own height and margin border CSS in template.css -->
-                  <div class="nus-faculty-border nus-dcnm">&nbsp;</div>
-                  <!-- FACULTY SUB-LOGO -->
-                 <div class="trial123">
-                    <a href="https://medicine.nus.edu.sg/mbio/index.html">
-                      <img src="icon-logo/dept-sublogo5.png" alt="SubLogo" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- LOGO SECTION - END -->
-              <div class="col d-none d-lg-block">
-                <!-- QUICKLINKS -->
-                <div class="nus-quicklinks">
-                  <ul class="box nav nav-pills">
-                    <li>
-                      <a href="https://news.nus.edu.sg/">News</a>
-                    </li>
-                    <li>
-                      <a href="https://libportal.nus.edu.sg/frontend/index">Library</a>
-                    </li>
-                    <li>
-                      <a href="https://myportal.nus.edu.sg/studentportal/alerts/all/">Student</a>
-                    </li>
-					<li>
-                      <a href="https://www.nus.edu.sg/inside-nus">Staff</a>
-                    </li>
-                  </ul>
-                </div>
-                <!-- //QUICKLINKS -->
-              </div>
-              <!-- SEARCH & BURGER Mobile-->
-              <div class="col nus-mobile-nav d-block d-lg-none">
-                <ul>
-                  <li>
-                    <a class="faicon fa-search collapsed" data-bs-toggle="collapse" href="#search-collapse" aria-expanded="false" aria-controls="search-collapse">&nbsp;</a>
-                  </li>
-                  <li>
-                    <a class="faicon fa-mobile-menu btn-toggle off-canvas-toggle" data-bs-toggle="offcanvas" href="#nus-sidebar-off-canvas">&nbsp;</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-        </header>
-        <!-- //HEADER -->
-        <!-- MAIN NAVIGATION Desktop-->
-        <nav class="navbar navbar-expand-lg nus-main-nav d-none d-lg-flex">
-          <div class="container-lg">
-            <!-- MAIN MENU - NUS - START -->
-            <div class="nus-megamenu d-none d-md-block ">
-              <ul class="nav navbar-nav level0">
-                <li >
-                  <a class="" href="index.html" data-target="#">Home</a>
-                </li>
-                <li class="current active" data-id="113" data-level="1">
-                  <a class="" href="research.html" data-target="#">Research</a>
-				</li>
-                <li class="dropdown mega-menu-parent">
-                  <a class="" href="people.html" data-target="#">People</a>
-                </li>
-                <li data-id="115" data-level="1">
-                  <a class="" href="publication.html" data-target="#">Publication</a>
-                </li>
-                <li data-id="116" data-level="1">
-                  <a class="" href="gallery.html" data-target="#">Gallery</a>
-                </li>
-				<li data-id="117" data-level="1">
-                  <a class="" href="join-us.html" data-target="#">Join Us</a>
-                </li>
-                <li data-id="118" data-level="1">
-                  <a class="" href="contact.html" data-target="#">Contact</a>
-                </li>
-              </ul>
-            </div>
-            <!-- MAIN MENU - NUS - END -->
-            <!-- SEARCH BUTTON ICON Desktop - START -->
-            <div class="search-btn-box d-none d-lg-block">
-              <a class="faicon fa-search collapsed" data-bs-toggle="collapse" href="#search-collapse" aria-expanded="false" aria-controls="search-collapse">&nbsp;</a>
-            </div>
-            <!-- SEARCH BUTTON ICON - END -->
-          </div>
-        </nav>
-        <!-- //MAIN NAVIGATION -->
-        <!-- SEARCH FORM Collapse-->
-        <div id="search-collapse" class="nus-search-box collapse">
-          <div class="container-lg py-3">
-            <div class="search">
-              <form action="https://www.google.com/search" method="get" class="form-inline form-search">
-                <input name="q" id="mod-search-searchword" class="form-control input-lg" type="text" placeholder="Search...">
-                <input type="hidden" name="domains" value="nus.edu.sg" />
-                <input type="hidden" name="sitesearch" value="nus.edu.sg" />
-              </form>
-            </div>
-          </div>
+  </div>
+</section>
+{% endfor %}
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head"><div><p class="eyebrow">Highlights</p><h2>Selected studies in more depth</h2><p>Summaries of recent papers. Each links to the full article.</p></div></div>
+    <div class="grid grid-2">
+      {% for h in site.data.research.highlights %}
+      <article class="card reveal">
+        <div class="card-media contain"><img src="{{ h.image | relative_url }}" alt="{{ h.alt }}" loading="lazy"></div>
+        <div class="card-body">
+          <div><span class="chip warm">{{ h.journal }} · {{ h.year }}</span></div>
+          <h3>{{ h.title }}</h3>
+          <p>{{ h.body }}</p>
+          <a class="more" href="{{ h.url }}">Read the paper →</a>
         </div>
-        <!-- NUS SEARCH - ENDS -->
-
-        
-        <!-- CONTENT - START -->
-	<!--
-        <div class="nus-banner">
-          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <!-- This is the section for website banner-->
-		<div class="banner-image"></div>
-            </div>
-          </div>
-        </div>
-	
-<div class="banner">
-	<img src="banner-image/banner-std-2.png" width="100%" height="auto" alt"">
-</div>
-		  
-<div class="container">
-	<div class="research-overview">
-		<h5>Research Overview</h5>
-		<p class="research-description">
-			Our research program explores the molecular mechanisms that underpin capsule synthesis and bacterial virulence. 
-			We want to understand how glycans on the cell surface shape pathogenicity and immunogenicity. 
-			Integrating systems biology, we also dissect genetic pathways to reveal vulnerabilities that may guide us in developing novel drug screening strategies. 
-			The lab aims to address fundamental questions in cell biology while translating our findings to prevent and cure infectious diseases.
-		</p>
-		<br>
-		<p class="research-list">
-			<b>1. Defining Specificity of Capsule Enzymes</b>
-			<br>
-			The specificity of capsule enzymes governs what is placed on the protective capsule in pneumococcus. 
-			We pioneered massively parallel approaches to test whether glycosyltransferases and 'flippases' are interchangeable. 
-			Our work elucidated the rules underlying the selectivity of each enzyme, helping us identify variants that relax or impose specificity. 
-			This knowledge facilitates the development of enabling technologies for engineering glycans. 
-			Using this platform, we produced a few medically relevant mammalian glycans, such as blood group antigens, the Galili antigen, and Lewis antigens.
-		</p>
-		<p class="research-list">
-			<b>2. Coordinating Capsule and Cell Wall Assembly</b>
-			<br>
-			A delicate balance exists between capsule and cell wall synthesis to ensure survival inside the host. 
-			We show that the capsule synthesis machinery integrates into the bacterial cell division complex. 
-			The capsule enzymes arrive at the division ring sequentially, starting by recruiting the tyrosine kinase system, CpsCD, to the septum. 
-			If the recruitment sequence fails, the protective capsule will no longer cover the septum, making the cell susceptible to complement. 
-			Ongoing work is to study how capsule synthesis synchronizes with other cell envelope layers.
-		</p>
-		<p class="research-list">
-			<b>3. Linking Capsule Structure to Function</b>
-			<br>
-			Our lab examines how variations in CPS structure affect the interaction between pneumococci and host cells. 
-			We explore the role of specific glycan structures in adhesion to human respiratory cultures, shedding light on how these molecular patterns influence immune evasion and colonization. 
-			These studies have significant implications for developing vaccines and therapies to better prevent pneumococcal infections.
-		</p>
-		<p class="research-list">
-			<b>4. Reinventing Systems Biology</b>
-			<br>
-			We develop high-throughput approaches to mining genetic interactions to elucidate gene functions. 
-			An example is Dual Tn-seq, which combines the strength of randomly barcoded transposon sequencing (RB Tn-seq) with the widely used Cre-lox system. 
-			The work captured genetic interactions from roughly 68% of double mutants that could theoretically be made. 
-			This massive dataset guides us to learn new biology from presumably well-studied pathways.
-		</p>
-	</div>
-</div>
-	
-<div class="container">
-	<div class="research-overview">
-	<h>Dual Transposon Sequencing Profiles the Genetic Interaction Landscape in Bacteria</h>
-	</div>
-</div>
-
-<div class="row5">
-  	<div class="column5">	      
-	<img src="research-image/research_image7v1.jpg" class="front-img" width="100%" height="auto">
-	</div>	      
-	
-	<div class="column5">	      
-	<h2>Dual Transposon Sequencing Profiles the Genetic Interaction Landscape in Bacteria</h2>
-		<p class="research-paragraph">
-			Gene redundancy complicates systematic characterization of gene function as single-gene deletions may not produce discernible phenotypes. 
-			We report dual transposon sequencing (dual Tn-seq), a platform for assaying the fitness of a comprehensive double mutant pool in parallel. 
-			Dual Tn-seq couples random barcode transposon site sequencing with the Cre-<i>lox</i> system, enabling deep sampling of 73% of the 1.3 million possible double gene deletions in <i>Streptococcus pneumoniae</i>. 
-			The genetic interactions identified span a wide range of biochemical processes, revealing new factors in presumably well-studied pathways, exemplified by a cytidine triphosphate synthase PyrJ. 
-			Moreover, this approach should permit further investigation of growth condition–specific genetic interactions.
-			Because dual Tn-seq does not require the construction of a large array of single mutants, it should be readily adaptable to various microorganisms.
-			</p>
-			<br>
-			<br>
-			<p>
-			<button class="button" onclick="window.location.href = 'https://www.science.org/doi/10.1126/science.adt7685';"> Read More </button>
-		</p> 
-	</div>	 
-</div>
-	
-<img src="research-image/front-image5.png" class="hidden" width="100%" height="5px">	
-
-
-
-<div class="container">
-	<div class="research-overview">
-	<h>Massively parallel barcode sequencing revealed the interchangeability of capsule transporters in <i>Streptococcus pneumoniae</i></h>
-	</div>
-</div>
-
-<div class="row5">
-  	<div class="column5">	      
-	<img src="research-image/research_image8v1.jpg" class="front-img" width="100%" height="auto">
-	</div>	      
-	
-	<div class="column5">	      
-	<h2>Massively parallel barcode sequencing revealed the interchangeability of capsule transporters in <i>Streptococcus pneumoniae</i></h2>
-		<p class="research-paragraph">
-			Multidrug/oligosaccharidyl-lipid/polysaccharide (MOP) family transporters are essential in glycan synthesis, flipping lipid-linked precursors across cell membranes. 
-			Yet, how they select their substrates remains enigmatic. Here, we investigate the substrate specificity of the MOP transporters in the capsular polysaccharide (CPS) synthesis pathway in <i>Streptococcus pneumoniae</i>. 
-			These capsule flippases collectively transport more than 100 types of capsule precursors. 
-			To determine whether they can substitute for one another, we developed a high-throughput approach to systematically examine nearly 6000 combinations of flippases and substrates. 
-			CPS flippases fall into three groups: relaxed, type-specific, and strictly specific. 
-			Cargo size and CPS acetylation affect transport, and we isolated additional gain-of-function flippase variants that can substitute for the peptidoglycan flippase YtgP (MurJ). 
-			We also showed that combining flippase variants in a single cassette allows various CPS precursors to be flipped, which may aid glycoengineering. 
-			This study reveals that MOP flippases exhibit broad specificity, shaping the evolution of glycan synthesis.
-			</p>
-			<br>
-			<br>
-			<p>
-			<button class="button" onclick="window.location.href = 'https://pubmed.ncbi.nlm.nih.gov/39854462/';"> Read More </button>
-		</p> 
-	</div>	 
-</div>
-	
-<img src="research-image/front-image5.png" class="hidden" width="100%" height="5px">
-	  
-
-<div class="container">
-	<div class="research-overview">
-	<h>Spatiotemporal Regulation of the CPS Complex</h>
-	</div>
-</div>	  
-	
-<div class="row5">
-  	<div class="column5">	      
-	<img src="research-image/research-image6v1.PNG" class="front-img" width="100%" height="auto">
-	</div>	      
-	
-	<div class="column5">	      
-	<h2>Spatiotemporal Regulation of the CPS Complex</h2>
-		<p class="research-paragraph">
-			Many pathogenic bacteria are encased in a layer of capsular polysaccharide (CPS). 
-			This layer is important for virulence by masking surface antigens, preventing opsonophagocytosis, and avoiding mucus entrapment. 
-			The bacterial tyrosine kinase (BY-kinase) regulates capsule synthesis and helps bacterial pathogens to survive different host niches. 
-			BY-kinases autophosphorylate at the C-terminal tyrosine residues upon external stimuli, but the role of phosphorylation is still unclear. 
-			Here, we report that the BY-kinase CpsCD is required for growth in <i>Streptococcus pneumoniae</i>. 
-			Cells lacking a functional <i>cpsC</i> or <i>cpsD</i> accumulated low molecular weight CPS and lysed because of the lethal sequestration of the lipid carrier undecaprenyl phosphate, resulting in inhibition of peptidoglycan (PG) synthesis. 
-			CpsC interacts with CpsD and the polymerase CpsH. CpsD phosphorylation reduces the length of CPS polymers presumably by controlling the activity of CpsC. 
-			Finally, pulse–chase experiments reveal the spatiotemporal coordination between CPS and PG synthesis. This coordination is dependent on CpsC and CpsD. 
-			Together, our study provides evidence that BY-kinases regulate capsule polymer length by fine-tuning CpsC activity through autophosphorylation.
-			</p>
-			<br>
-			<br>
-			<p>
-			<button class="button" onclick="window.location.href = 'https://pubmed.ncbi.nlm.nih.gov/34732571/';"> Read More </button>
-		</p> 
-	</div>	 
-</div>
-	
-<img src="research-image/front-image5.png" class="hidden" width="100%" height="5px">	
-	
-<div class="container">
-	<div class="research-overview">
-	<h>Cargo Selection of CPS Flippases</h>
-	</div>
-</div>
-	
-<div class="row6">
-  	<div class="column6">	      
-	<img src="research-image/research-image5v1.PNG" class="front-img" width="100%" height="auto">
-	</div>	      
-	
-	<div class="column6">	      
-	<h2>Cargo Selection of CPS Flippases</h2>
-		<p class="research-paragraph">
-			MOP (Multidrug/Oligosaccharidyl-lipid/Polysaccharide) family transporters are found in almost all life forms. 
-			They are responsible for transporting lipid-linked precursors across the cell membrane to support the synthesis of various glycoconjugates. 
-			While significant progress has been made in elucidating their transport mechanism, how these transporters select their substrates remains unclear. 
-			Here, we systematically tested the MOP transporters in the <i>Streptococcus pneumoniae</i> capsule pathway for their ability to translocate noncognate capsule precursors. 
-			Sequence similarity cannot predict whether these transporters are interchangeable. 
-			We showed that subtle changes in the central aqueous cavity of the transporter are sufficient to accommodate a different cargo. 
-			These changes can occur naturally, suggesting a potential mechanism of expanding substrate selectivity. 
-			A directed evolution experiment was performed to identify gain-of-function variants that translocate a noncognate cargo. 
-			Coupled with a high throughput mutagenesis and sequencing (Mut-seq) experiment, residues that are functionally important for the capsule transporter were revealed. 
-			Lastly, we showed that the expression of a flippase that can transport unfinished precursors resulted in an increased susceptibility to bacitracin and mild cell shape defects, 
-			which may be a driving force to maintain transporter specificity.
-			</p>
-			<br>
-			<br>
-			<p>
-			<button class="button" onclick="window.location.href = 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8561386/';"> Read More </button>
-		</p>
-	</div>	 
-</div>
-	
-<img src="research-image/front-image5.png" class="hidden" width="100%" height="100px">	
-
-<!--	
-<table>
-	
-	<tr>
-		<td style="width:60%"><img src="research-image6v1.PNG" width="100%" height="auto" alt=""></td>
-		<td>
-			<p>
-			Many pathogenic bacteria are encased in a layer of capsular polysaccharide (CPS). 
-			This layer is important for virulence by masking surface antigens, preventing opsonophagocytosis, and avoiding mucus entrapment. 
-			The bacterial tyrosine kinase (BY-kinase) regulates capsule synthesis and helps bacterial pathogens to survive different host niches. 
-			BY-kinases autophosphorylate at the C-terminal tyrosine residues upon external stimuli, but the role of phosphorylation is still unclear. 
-			Here, we report that the BY-kinase CpsCD is required for growth in <i>Streptococcus pneumoniae</i>. 
-			Cells lacking a functional <i>cpsC</i> or <i>cpsD</i> accumulated low molecular weight CPS and lysed because of the lethal sequestration of the lipid carrier undecaprenyl phosphate, resulting in inhibition of peptidoglycan (PG) synthesis. 
-			CpsC interacts with CpsD and the polymerase CpsH. CpsD phosphorylation reduces the length of CPS polymers presumably by controlling the activity of CpsC. 
-			Finally, pulse–chase experiments reveal the spatiotemporal coordination between CPS and PG synthesis. This coordination is dependent on CpsC and CpsD. 
-			Together, our study provides evidence that BY-kinases regulate capsule polymer length by fine-tuning CpsC activity through autophosphorylation.
-			</p>
-			<br>
-			<br>
-			<p>
-			<button class="button" onclick="window.location.href = 'https://pubmed.ncbi.nlm.nih.gov/34732571/';"> Read More </button>
-			</p>
-		
-		</td>
-	</tr>
-</table>
--->	
-<!--
-<div class="container">
-	<div class="research-overview">
-	<h>Cargo Selection of CPS Flippases</h>
-	</div>
-</div>
-	
-
-
-<table>
-	<tr>
-		<td style="width:60%"><img src="research-image5v1.PNG" width="100%" height="auto" alt=""></td>
-		<td>
-			<p>
-			MOP (Multidrug/Oligosaccharidyl-lipid/Polysaccharide) family transporters are found in almost all life forms. 
-			They are responsible for transporting lipid-linked precursors across the cell membrane to support the synthesis of various glycoconjugates. 
-			While significant progress has been made in elucidating their transport mechanism, how these transporters select their substrates remains unclear. 
-			Here, we systematically tested the MOP transporters in the <i>Streptococcus pneumoniae</i> capsule pathway for their ability to translocate noncognate capsule precursors. 
-			Sequence similarity cannot predict whether these transporters are interchangeable. 
-			We showed that subtle changes in the central aqueous cavity of the transporter are sufficient to accommodate a different cargo. 
-			These changes can occur naturally, suggesting a potential mechanism of expanding substrate selectivity. 
-			A directed evolution experiment was performed to identify gain-of-function variants that translocate a noncognate cargo. 
-			Coupled with a high throughput mutagenesis and sequencing (Mut-seq) experiment, residues that are functionally important for the capsule transporter were revealed. 
-			Lastly, we showed that the expression of a flippase that can transport unfinished precursors resulted in an increased susceptibility to bacitracin and mild cell shape defects, 
-			which may be a driving force to maintain transporter specificity.
-			</p>
-			<br>
-			<br>
-			<p>
-			<button class="button" onclick="window.location.href = 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8561386/';"> Read More </button>
-			</p>
-		
-		</td>
-	</tr>
-</table>
-
-<!--
-<table>
-	
-	<tr id="t1">
-		<td style="width:60%"><img src="research-image5v1.PNG" width="100%" height="auto" alt=""></td>
-		<td>
-			<p class="research-topic">
-			Cargo Selection of CPS Flippases
-			</p>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<p>
-			MOP (Multidrug/Oligosaccharidyl-lipid/Polysaccharide) family transporters are found in almost all life forms. 
-			They are responsible for transporting lipid-linked precursors across the cell membrane to support the synthesis of various glycoconjugates. 
-			While significant progress has been made in elucidating their transport mechanism, how these transporters select their substrates remains unclear. 
-			Here, we systematically tested the MOP transporters in the <i>Streptococcus pneumoniae</i> capsule pathway for their ability to translocate noncognate capsule precursors. 
-			Sequence similarity cannot predict whether these transporters are interchangeable. 
-			We showed that subtle changes in the central aqueous cavity of the transporter are sufficient to accommodate a different cargo. 
-			These changes can occur naturally, suggesting a potential mechanism of expanding substrate selectivity. 
-			A directed evolution experiment was performed to identify gain-of-function variants that translocate a noncognate cargo. 
-			Coupled with a high throughput mutagenesis and sequencing (Mut-seq) experiment, residues that are functionally important for the capsule transporter were revealed. 
-			Lastly, we showed that the expression of a flippase that can transport unfinished precursors resulted in an increased susceptibility to bacitracin and mild cell shape defects, 
-			which may be a driving force to maintain transporter specificity. 
-			</p>
-			<br>
-			<br>
-			<p>
-			<button class="button" onclick="window.location.href = 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8561386/';"> Read More </button>
-			</p>
-		</td>
-	</tr>
-	<tr id="t2">
-		<td>
-			<p class="research-topic">
-			Cargo Selection of CPS Flippases
-			</p>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<p>
-			MOP (Multidrug/Oligosaccharidyl-lipid/Polysaccharide) family transporters are found in almost all life forms. 
-			They are responsible for transporting lipid-linked precursors across the cell membrane to support the synthesis of various glycoconjugates. 
-			While significant progress has been made in elucidating their transport mechanism, how these transporters select their substrates remains unclear. 
-			Here, we systematically tested the MOP transporters in the <i>Streptococcus pneumoniae</i> capsule pathway for their ability to translocate noncognate capsule precursors. 
-			Sequence similarity cannot predict whether these transporters are interchangeable. 
-			We showed that subtle changes in the central aqueous cavity of the transporter are sufficient to accommodate a different cargo. 
-			These changes can occur naturally, suggesting a potential mechanism of expanding substrate selectivity. 
-			A directed evolution experiment was performed to identify gain-of-function variants that translocate a noncognate cargo. 
-			Coupled with a high throughput mutagenesis and sequencing (Mut-seq) experiment, residues that are functionally important for the capsule transporter were revealed. 
-			Lastly, we showed that the expression of a flippase that can transport unfinished precursors resulted in an increased susceptibility to bacitracin and mild cell shape defects, 
-			which may be a driving force to maintain transporter specificity. 
-			</p>
-			<br>
-			<br>
-			<p>
-			<button class="button" onclick="window.location.href = 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8561386/';"> Read More </button>
-			</p>
-		</td>
-		<td style="width:60%"><img src="research-image5v1.PNG" width="100%" height="auto" alt=""></td>
-	</tr>
-
-</table>
-	      
-	<!--
-	<tr>
-		<td><img src="research-image3.png" width="400" height="300" alt=""></td>
-		<td><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-		<p><button class="button" onclick="window.location.href = 'https://scholar.google.com/citations?user=mriC-PcAAAAJ&hl=en';"> Read More </button></p></td>
-	</tr>
-	
-	<tr id="t3">
-		<td><img src="research-image4.png" width="400" height="300" alt=""></td>
-		<td><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-		<p><button class="button" onclick="window.location.href = 'https://scholar.google.com/citations?user=mriC-PcAAAAJ&hl=en';"> Read More </button></p></td>
-	</tr>
-	<tr id="t4">
-		<td><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-		<p><button class="button" onclick="window.location.href = 'https://scholar.google.com/citations?user=mriC-PcAAAAJ&hl=en';"> Read More </button></p></td>
-		<td><img src="research-image4.png" width="400" height="300" alt=""></td>
-	</tr>
-	-->
-	
-		  
-
-
-		
-
-	
-	
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-        <!-- CONTENT - END -->
-        <!-- NUS BREADCRUMBS - START -->
-        <div class="nus-breadcrumbs">
-          <div class="container-lg">
-            <ul>
-              <li>
-                <span class="icon faicon fa-location"></span>
-                <a href="index.html">Home</a>
-              </li>
-              <li>Research</li>
-            </ul>
-          </div>
-        </div>
-        <!-- NUS BREADCRUMBS - END -->
-        <!-- FOOTER - START -->
-        <footer class="nus-footer">
-          <!-- FOOT NAVIGATION - START -->
-          <div class="container-lg">
-            <div class="row wrapper navigator">
-              <div class="text-center">
-                <div class="nus-social-box">
-                  <div class="nus-module module">
-                    <div class="module-inner">
-                      <h3 class="title">
-                        <span>Bacterial Cell Envelope and Antibiotic Development (BCEAD) Laboratory</span>
-                      </h3>
-                      <div class="module-ct">
-                        <ul class="nus-contact-us">
-                          <li>
-                            <span class="icon faicon fa-address"></span>MD4 5 Science Drive 2  <br />Singapore 117545
-                          </li>
-                          <li>
-                            <span class="icon faicon fa-phone"></span>+65 6601 6356
-                          </li>
-                          <li>
-                            <span class="icon faicon fa-email"></span>
-                            <a href="mailto:xxx@nus.edu.sg">lsham@nus.edu.sg</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="nus-module module footnav-alt">
-                    <div class="module-inner">
-                      <div class="module-ct">
-                        <div>
-			<!--
-                          <a href="http://www.facebook.com/nus.singapore" target="_blank">
-                            <img src="facebook.png" alt="facebook" width="32" height="32">
-                          </a>&nbsp; <a href="http://twitter.com/NUSingapore" target="_blank">
-                            <img src="twitter.png" alt="twitter" width="32" height="32">
-                          </a>&nbsp; <a href="http://www.youtube.com/nuscast" target="_blank">
-                            <img src="youtube.png" alt="youtube" width="32" height="32">
-                          </a>
-			-->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- FOOT NAVIGATION - END -->
-          <!-- FOOTER - COPYRIGHT - START -->
-          <div class="copyright">
-            <div class="container-lg">
-              <div class="row">
-                <div class="info">&copy; <a href="http://www.nus.edu.sg/">National University of Singapore</a>. All Rights Reserved. </div>
-                <div>
-                  <ul class="nav-copyright">
-                    <li>
-                      <a href="http://www.nus.edu.sg/legal-information-notices">Legal</a>
-                    </li>
-                    <li class="bullet">
-                      <a href="#">Branding guidelines</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- FOOTER - COPYRIGHT - END -->
-        </footer>
-        <!-- FOOTER - END -->
-      </div>
-      <!-- NUS WRAPPER -->
+      </article>
+      {% endfor %}
     </div>
-    <!-- NUS BODY container-lg -->
-    <a name="footer"></a>
-  </body>
-</html>
+  </div>
+</section>
 
-
-
-
-
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><div><p class="eyebrow">In the lab</p><h2>Images from our work</h2></div></div>
+    <div class="grid grid-4">
+      {% assign slides = "capsule-chain:A pneumococcal chain and its capsule repeat units|cps-structures:Capsule repeat-unit structures across serotypes|relaxed-mutations:Flippase mutations that relax cargo specificity|enzyme-structure:Structure of a capsule enzyme|nmr:NMR spectrum used to solve a glycan structure|flippase-swap:Rewiring capsule synthesis: new linkages and flippase cargo|blood-agar-plate:Pneumococcal colonies on blood agar|plate-tower:A tower of agar plates in the lab" | split: "|" %}
+      {% for s in slides %}{% assign kv = s | split: ":" %}
+      <figure class="card" style="margin:0">
+        <div class="card-media contain" style="aspect-ratio:1"><img src="{{ '/assets/img/slides/' | append: kv[0] | append: '.webp' | relative_url }}" alt="{{ kv[1] }}" loading="lazy"></div>
+        <figcaption class="card-body"><p>{{ kv[1] }}</p></figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>

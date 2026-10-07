@@ -1,0 +1,21 @@
+---
+title: News
+description: "News from the Sham lab: papers, software, teaching resources and people."
+---
+{% include page-head.html eyebrow="News" title="Lab news" lede="Papers, software, teaching resources and milestones." seed=17 %}
+<section class="section">
+  <div class="wrap" style="max-width:860px">
+    <ul class="news-list">
+      {% for n in site.data.news %}
+      <li class="news-item">
+        <span class="news-date">{{ n.date }}</span>
+        <div>
+          <span class="chip{% if n.tag == 'Paper' %} warm{% endif %}">{{ n.tag }}</span>
+          <h3>{% if n.link %}<a href="{% if n.link contains '://' %}{{ n.link }}{% else %}{{ n.link | relative_url }}{% endif %}">{{ n.title }}</a>{% else %}{{ n.title }}{% endif %}</h3>
+          <p>{{ n.body }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

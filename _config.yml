@@ -1,0 +1,90 @@
+title: Sham Lab
+long_title: Bacterial Cell Envelope and Antibiotic Development Laboratory
+short_name: BCEAD Lab
+description: >-
+  The Sham lab at the National University of Singapore studies how
+  Streptococcus pneumoniae builds its cell envelope and capsule, using genetics,
+  systems biology, biochemistry and cell biology.
+lang: en
+email: miclts@nus.edu.sg
+phone: "+65 6601 6356"
+scholar: https://scholar.google.com/citations?user=mriC-PcAAAAJ&hl=en
+department: Department of Microbiology and Immunology
+department_url: https://medicine.nus.edu.sg/mbio/
+school: Yong Loo Lin School of Medicine
+university: National University of Singapore
+address:
+  - Block MD4, 5 Science Drive 2
+  - Singapore 117545
+webmaster_verifications:
+  google: 7NSYtSSbNBwtUEwLO0xiJFZG8CC-acyc50vRG8x1m4o
+
+# GitHub Pages sets `baseurl` automatically for project sites. Set it here only
+# when serving from a sub-path somewhere else, e.g. baseurl: /CS_lab
+# baseurl: ""
+
+collections:
+  people:
+    output: true
+    permalink: /people/:name/
+
+defaults:
+  - scope: { path: "", type: people }
+    values: { layout: person }
+  - scope: { path: "" }
+    values: { layout: default }
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+markdown: kramdown
+exclude:
+  # Legacy NUS-template site, kept in the repo but no longer published.
+  # Old page URLs redirect to the new pages (see `redirect_from`).
+  # These can be deleted once you're happy with the new site.
+  - individual-profile-*.html
+  - alumni.html
+  - publication.html
+  - html/
+  - individualpage/
+  - archieve/
+  - css/
+  - banner-image/
+  - research-image/
+  - profile-image/
+  - lab-photo/
+  - icon-logo/
+  - 404.zip
+  - 500x500.jpg
+  - "*.otf"
+  - "*.eot"
+  - "*.ttf"
+  - "*.woff"
+  - "*.woff2"
+  - fa-*.svg
+  - fontawesome-webfont.svg
+  - all.min.css
+  - alumni.css
+  - bootstrap.bundle.min.js
+  - bootstrap.min.css
+  - custom.css
+  - custom.js
+  - error.css
+  - font-awesome.css
+  - font-awesome.min.css
+  - magnifier.js
+  - main.js
+  - people1.css
+  - styleguide.css
+  - v5.0.2.css
+  - v5.0.2.js
+  - google9ad85fa60b55a144.html-1.txt
+  - README.md
+  - CONTRIBUTING.md
+  - Gemfile
+  - Gemfile.lock
+  - scripts/
+  - vendor/
+  - node_modules/

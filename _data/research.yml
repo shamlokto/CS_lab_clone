@@ -1,0 +1,132 @@
+# Research themes shown on the home and research pages.
+themes:
+  - id: specificity
+    code: "01"
+    title: Defining the specificity of capsule enzymes
+    short: Which sugars go where, and why. Rules for glycosyltransferases and flippases, and enzymes rewired to make new glycans.
+    body: >-
+      The specificity of capsule enzymes governs what is placed on the protective
+      capsule of the pneumococcus. We pioneered massively parallel approaches to test
+      whether glycosyltransferases and flippases are interchangeable. This work
+      revealed the rules behind each enzyme's selectivity and identified variants that
+      relax or impose specificity. That knowledge underpins tools for engineering
+      glycans: with this platform we have produced medically relevant mammalian
+      glycans, including blood group antigens, the Galili antigen and Lewis antigens.
+    image: /assets/img/slides/flippase-heatmap.webp
+    alt: Heatmap of capsule flippases against capsule serotype cargoes, showing which flippases can transport which precursors
+
+  - id: envelope
+    code: "02"
+    title: Coordinating capsule and cell wall assembly
+    short: How the capsule machine docks onto the division ring so the new septum is never left exposed.
+    body: >-
+      Capsule and cell wall synthesis must stay in balance for the bacterium to
+      survive inside the host. We showed that the capsule synthesis machinery is
+      integrated into the cell division complex. Capsule enzymes arrive at the
+      division ring in sequence, starting with recruitment of the tyrosine kinase
+      system CpsCD to the septum. If that sequence fails, the capsule no longer
+      covers the septum and the cell becomes susceptible to complement. We are now
+      studying how capsule synthesis is synchronised with the other layers of the
+      cell envelope.
+    image: /assets/img/slides/septal-kymograph.webp
+    alt: Time-lapse microscopy and kymographs of capsule and cell wall synthesis at the pneumococcal septum
+
+  - id: host
+    code: "03"
+    title: Linking capsule structure to function
+    short: How the fine structure of a glycan changes adhesion to human airway cells and escape from immunity.
+    body: >-
+      We examine how variation in capsule structure changes the way pneumococci
+      interact with host cells. Using human respiratory cultures, we study how
+      specific glycan structures affect adhesion, shedding light on how these
+      molecular patterns influence colonisation and immune evasion. The results
+      inform the design of vaccines and therapies against pneumococcal disease.
+    image: /assets/img/slides/glycan-binding.webp
+    alt: Binding of pneumococcal capsule types to human nasal epithelial cells, plotted against capsule structure
+
+  - id: systems
+    code: "04"
+    title: Reinventing systems biology
+    short: Dual Tn-seq maps genetic interactions across most of the genome, and turns up new biology in well-studied pathways.
+    body: >-
+      We develop high-throughput methods for mining genetic interactions to work
+      out gene function. Dual Tn-seq combines randomly barcoded transposon
+      sequencing (RB Tn-seq) with the Cre-lox system, and sampled 73% of the
+      roughly 1.3 million possible double gene deletions in
+      <i>S. pneumoniae</i>. This dataset is helping us find new factors in
+      pathways long thought to be understood.
+    image: /assets/img/slides/gi-landscape.webp
+    alt: Scatter plot of about 890,000 gene-pair interactions from dual Tn-seq, with positive and negative interactions highlighted
+
+highlights:
+  - title: Dual transposon sequencing profiles the genetic interaction landscape in bacteria
+    journal: Science
+    year: 2025
+    theme: systems
+    url: https://www.science.org/doi/10.1126/science.adt7685
+    image: /assets/img/research/dual-tnseq.webp
+    alt: Dual Tn-seq workflow, from a transposon double-mutant library through Cre recombination to sequencing of dual barcodes
+    body: >-
+      Gene redundancy makes gene function hard to characterise, because deleting
+      one gene often has no visible effect. Dual Tn-seq assays the fitness of a
+      comprehensive pool of double mutants in parallel by coupling random barcode
+      transposon site sequencing with the Cre-lox system. It sampled 73% of the 1.3
+      million possible double gene deletions in <i>Streptococcus pneumoniae</i>.
+      The interactions span a wide range of biochemical processes and reveal new
+      factors in supposedly well-studied pathways, such as the cytidine
+      triphosphate synthase PyrJ. Because it does not need a large array of single
+      mutants, the approach should adapt readily to other microorganisms and growth
+      conditions.
+
+  - title: Massively parallel barcode sequencing revealed the interchangeability of capsule transporters in <i>Streptococcus pneumoniae</i>
+    journal: Science Advances
+    year: 2025
+    theme: specificity
+    url: https://pubmed.ncbi.nlm.nih.gov/39854462/
+    image: /assets/img/research/flippase-barcode.webp
+    alt: Barcoded capsule-switch strains and the heatmap of 6,320 flippase and cargo combinations
+    body: >-
+      MOP-family transporters flip lipid-linked glycan precursors across the
+      membrane, but how they choose their cargo is unclear. Pneumococcal capsule
+      flippases collectively move more than 100 types of capsule precursor. We
+      built a high-throughput approach to test nearly 6,000 flippase and substrate
+      combinations. Flippases fall into three groups: relaxed, type-specific and
+      strictly specific. Cargo size and acetylation affect transport, and we
+      isolated gain-of-function variants that can replace the peptidoglycan
+      flippase MurJ. Combining flippase variants in one cassette lets diverse
+      precursors be flipped, which may aid glycoengineering.
+
+  - title: The bacterial tyrosine kinase system CpsBCD governs the length of capsule polymers
+    journal: PNAS
+    year: 2021
+    theme: envelope
+    url: https://pubmed.ncbi.nlm.nih.gov/34732571/
+    image: /assets/img/research/cpscd-microscopy.webp
+    alt: Fluorescence microscopy of capsule and peptidoglycan synthesis in pneumococcal cells over time
+    body: >-
+      Bacterial tyrosine kinases (BY-kinases) regulate capsule synthesis and help
+      pathogens survive in different host niches. We found that the BY-kinase
+      CpsCD is required for growth of <i>S. pneumoniae</i>. Cells without
+      functional <i>cpsC</i> or <i>cpsD</i> accumulate short capsule polymers and
+      lyse, because the lipid carrier undecaprenyl phosphate is sequestered and
+      peptidoglycan synthesis stalls. CpsD phosphorylation shortens capsule
+      polymers by tuning CpsC activity, and pulse-chase experiments show that
+      capsule and peptidoglycan synthesis are coordinated in space and time
+      through CpsC and CpsD.
+
+  - title: High-throughput mutagenesis and cross-complementation reveal substrate preference and critical residues of capsule transporters
+    journal: mBio
+    year: 2021
+    theme: specificity
+    url: https://pubmed.ncbi.nlm.nih.gov/34724815/
+    image: /assets/img/research/flippase-cargo.webp
+    alt: Cross-complementation of capsule flippases and residues important for transporter function
+    body: >-
+      We systematically tested the MOP transporters of the pneumococcal capsule
+      pathway for their ability to move non-cognate capsule precursors. Sequence
+      similarity does not predict interchangeability: subtle changes in the
+      central aqueous cavity are enough to accommodate a different cargo, and such
+      changes occur naturally. Directed evolution and Mut-seq revealed
+      functionally important residues. A flippase that transports unfinished
+      precursors increases bacitracin susceptibility and causes mild shape
+      defects, which may be what keeps transporters specific.
