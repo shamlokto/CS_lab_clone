@@ -1,0 +1,189 @@
+# Publications, newest first.
+# Fields: title, authors, journal, details (volume/issue), year, url,
+#         topics (any of: systems, specificity, envelope, host, glyco, review),
+#         featured (true = shown on the home page), image (optional)
+# `group: earlier` marks work published before the lab started at NUS.
+# Lab members' names are bolded automatically when they match _people entries
+# listed in `lab_authors` below.
+
+lab:
+  - title: Dual transposon sequencing profiles the genetic interaction landscape in bacteria
+    authors: Justin J. Zik, Morgan N. Price, Keisha Hanifa Alma Mayra, Audrey A. Santoso, Adam P. Arkin, Adam M. Deutschbauer, Lok-To Sham
+    journal: Science
+    details: "389 (6767)"
+    year: 2025
+    url: https://www.science.org/doi/10.1126/science.adt7685
+    doi: 10.1126/science.adt7685
+    topics: [systems]
+    featured: true
+    image: /assets/img/research/dual-tnseq.webp
+
+  - title: Leveraging the capsular polysaccharide synthesis pathway in <i>Streptococcus pneumoniae</i> as a genetic glycoengineering platform
+    authors: Cheryl Kang-Rou Wong, Ye-Yu Chun, Tong Su, Lok-To Sham
+    journal: ACS Bio & Med Chem Au
+    details: "5 (3)"
+    year: 2025
+    url: https://pubmed.ncbi.nlm.nih.gov/40556784/
+    topics: [glyco, review]
+    featured: true
+
+  - title: Massively parallel barcode sequencing revealed the interchangeability of capsule transporters in <i>Streptococcus pneumoniae</i>
+    authors: Wan-Zhen Chua, Rachel Lyn Ee Wong, Ye-Yu Chun, Nicole Ng Chyi Shien, Tong Su, Matthias Maiwald, Kean Lee Chew, Raymond Tzer-Pin Lin, Alyson M. Hockenberry, Min Luo, Lok-To Sham
+    journal: Science Advances
+    details: "11 (4)"
+    year: 2025
+    url: https://pubmed.ncbi.nlm.nih.gov/39854462/
+    topics: [specificity, systems]
+    featured: true
+    image: /assets/img/research/flippase-barcode.webp
+
+  - title: Rewiring the pneumococcal capsule pathway for investigating glycosyltransferase specificity and genetic glycoengineering
+    authors: Tong Su, Wan-Zhen Chua, Yao Liu, Jingsong Fan, Si-Yin Tan, Dai-Wen Yang, Lok-To Sham
+    journal: Science Advances
+    details: "9 (36)"
+    year: 2023
+    url: https://pubmed.ncbi.nlm.nih.gov/37672581/
+    topics: [specificity, glyco]
+
+  - title: The divisome but not the elongasome organizes capsule synthesis in <i>Streptococcus pneumoniae</i>
+    authors: Rei Nakamoto, Sarp Bamyaci, Karin Blomqvist, Staffan Normark, Birgitta Henriques-Normark, Lok-To Sham
+    journal: Nature Communications
+    details: "14 (1)"
+    year: 2023
+    url: https://pubmed.ncbi.nlm.nih.gov/37264013/
+    topics: [envelope]
+
+  - title: Influence of glycan structure on the colonization of <i>Streptococcus pneumoniae</i> on human respiratory epithelial cells
+    authors: Ye-Yu Chun, Kai Sen Tan, Lisa Yu, Michelle Pang, Ming Hui Millie Wong, Rei Nakamoto, Wan-Zhen Chua, Amanda Huee-Ping Wong, Zhe Zhang Ryan Lew, Hsiao Hui Ong, Vincent T. Chow, Thai Tran, De Yun Wang, Lok-To Sham
+    journal: Proceedings of the National Academy of Sciences
+    details: "120 (13)"
+    year: 2023
+    url: https://pubmed.ncbi.nlm.nih.gov/36943879/
+    topics: [host]
+
+  - title: High-throughput mutagenesis and cross-complementation experiments reveal substrate preference and critical residues of the capsule transporters in <i>Streptococcus pneumoniae</i>
+    authors: Wan-Zhen Chua, Matthias Maiwald, Kean Lee Chew, Raymond Tzer-Pin Lin, Sanduo Zheng, Lok-To Sham
+    journal: mBio
+    details: "12 (6)"
+    year: 2021
+    url: https://pubmed.ncbi.nlm.nih.gov/34724815/
+    topics: [specificity]
+
+  - title: The bacterial tyrosine kinase system CpsBCD governs the length of capsule polymers
+    authors: Rei Nakamoto, Jeric Mun Chung Kwan, Jasmine Fei Li Chin, Hui Ting Ong, Josue Flores-Kim, Caroline Midonet, Michael S. VanNieuwenhze, Xue Li Guan, Lok-To Sham
+    journal: Proceedings of the National Academy of Sciences
+    details: "118 (45)"
+    year: 2021
+    url: https://pubmed.ncbi.nlm.nih.gov/34732571/
+    topics: [envelope]
+
+  - title: Decoding capsule synthesis in <i>Streptococcus pneumoniae</i>
+    authors: Tong Su, Rei Nakamoto, Ye-Yu Chun, Wan-Zhen Chua, Jia-Hui Chen, Justin J. Zik, Lok-To Sham
+    journal: FEMS Microbiology Reviews
+    details: "45 (4)"
+    year: 2021
+    url: https://pubmed.ncbi.nlm.nih.gov/33338218/
+    topics: [review]
+
+  - title: Capillary leakage provides nutrients and antioxidants for rapid pneumococcal proliferation in influenza-infected lower airways
+    authors: Vicky Sender, Karina Hentrich, Anuj Pathak, Alicia Tan Qian Ler, Bethel Tesfai Embaie, Susanna L. Lundström, Massimiliano Gaetani, Jan Bergstrand, Rei Nakamoto, Lok-To Sham, Jerker Widengren, Staffan Normark, Birgitta Henriques-Normark
+    journal: Proceedings of the National Academy of Sciences
+    details: "117 (49)"
+    year: 2020
+    url: https://pubmed.ncbi.nlm.nih.gov/33229573/
+    topics: [host]
+
+  - title: Cell envelope defects of different capsule-null mutants in K1 hypervirulent <i>Klebsiella pneumoniae</i> can affect bacterial pathogenesis
+    authors: Yi Han Tan, Yahua Chen, Wilson H. W. Chu, Lok-To Sham, Yunn-Hwen Gan
+    journal: Molecular Microbiology
+    details: "113 (5)"
+    year: 2020
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7317392/
+    topics: [envelope]
+
+# Selected work from before the lab (from Chris Sham's earlier profile page).
+# Links go to a PubMed title search.
+earlier:
+  - title: Loss of specificity variants of WzxC suggest that substrate recognition is coupled with transporter opening in MOP-family flippases
+    authors: Sham LT, Zheng S, Kruse AC, Bernhardt TG
+    journal: Molecular Microbiology
+    year: 2018
+  - title: Structure and function of the lipid II flippase MurJ from <i>Escherichia coli</i>
+    authors: Zheng S, Sham LT, Brock K, Robins WP, Mekalanos JJ, Marks DS, Bernhardt TG, Kruse AC
+    journal: PNAS
+    details: "115:6709–14"
+    year: 2018
+  - title: A viral protein antibiotic inhibits lipid II flippase activity
+    authors: Chamakura KR, Sham LT, Davis RM, Min L, Cho H, Ruiz N, Bernhardt TG, Young R
+    journal: Nature Microbiology
+    details: "2:1480–84"
+    year: 2017
+  - title: MurJ and a novel lipid II flippase are required for cell wall biogenesis in <i>Bacillus subtilis</i>
+    authors: Meeske AJ, Sham LT, Kimsey H, Koo BM, Gross CA, Bernhardt TG, Rudner DZ
+    journal: PNAS
+    details: "112:6437–42"
+    year: 2015
+  - title: "Bacterial cell wall. MurJ is the flippase of lipid-linked precursors for peptidoglycan biogenesis"
+    authors: Sham LT, Butler EK, Lebar MD, Kahne D, Bernhardt TG, Ruiz N
+    journal: Science
+    details: "345:220–2"
+    year: 2014
+  - title: Involvement of FtsE ATPase and FtsX extracellular loops 1 and 2 in FtsEX-PcsB complex function in cell division of <i>Streptococcus pneumoniae</i> D39
+    authors: Sham LT, Jensen KR, Bruce KE, Winkler ME
+    journal: mBio
+    details: "4:e00431-13"
+    year: 2013
+  - title: Selective penicillin-binding protein imaging probes reveal substructure in bacterial cell division
+    authors: Kocaoglu O, Calvo RA, Sham LT, Cozy LM, Francis S, Lanning BR, Winkler ME, Kearns DB, Carlson EE
+    journal: ACS Chemical Biology
+    details: "7:1746–53"
+    year: 2012
+  - title: Recent advances in pneumococcal peptidoglycan biosynthesis suggest vaccine and antimicrobial targets
+    authors: Sham LT, Tsui HCT, Land AD, Barendt SM, Winkler ME
+    journal: Current Opinion in Microbiology
+    details: "15:194–203"
+    year: 2012
+  - title: Essential PcsB putative peptidoglycan hydrolase interacts with the essential FtsX<sub>Spn</sub> cell division protein in <i>Streptococcus pneumoniae</i> D39
+    authors: Sham LT, Barendt SM, Kopecky KE, Winkler ME
+    journal: PNAS
+    details: "108:E1061–9"
+    year: 2011
+  - title: Characterization of mutants deficient in the L,D-carboxypeptidase (DacB) and WalRK<sub>Spn</sub> (VicRK) regulon involved in peptidoglycan maturation of <i>Streptococcus pneumoniae</i> serotype 2 strain D39
+    authors: Barendt SM, Sham LT, Winkler ME
+    journal: Journal of Bacteriology
+    details: "193:2290–2300"
+    year: 2011
+  - title: Influences of capsule on cell shape and chain formation of wild-type and <i>pcsB</i> mutants of serotype 2 <i>Streptococcus pneumoniae</i>
+    authors: Barendt SM, Land AD, Sham LT, Ng WL, Tsui HC, Arnold RJ, Winkler ME
+    journal: Journal of Bacteriology
+    details: "191:3024–3040"
+    year: 2009
+
+topics:
+  systems: Systems biology
+  specificity: Enzyme specificity
+  envelope: Envelope assembly
+  host: Host interaction
+  glyco: Glycoengineering
+  review: Review
+
+# Names (as they appear in author lists) to highlight as lab members.
+lab_authors:
+  - Lok-To Sham
+  - Sham LT
+  - Justin J. Zik
+  - Wan-Zhen Chua
+  - Ye-Yu Chun
+  - Tong Su
+  - Rei Nakamoto
+  - Cheryl Kang-Rou Wong
+  - Rachel Lyn Ee Wong
+  - Nicole Ng Chyi Shien
+  - Keisha Hanifa Alma Mayra
+  - Audrey A. Santoso
+  - Yao Liu
+  - Si-Yin Tan
+  - Jia-Hui Chen
+  - Lisa Yu
+  - Michelle Pang
+  - Ming Hui Millie Wong

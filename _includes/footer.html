@@ -1,0 +1,31 @@
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-title">{{ site.long_title }}</p>
+      <p class="muted">{{ site.department }}<br>{{ site.school }}<br>{{ site.university }}<br>{{ site.address | join: "<br>" }}</p>
+    </div>
+    <div>
+      <p class="eyebrow">Explore</p>
+      <ul class="footer-links">
+        <li><a href="{{ '/research.html' | relative_url }}">Research</a></li>
+        <li><a href="{{ '/publications.html' | relative_url }}">Publications</a></li>
+        <li><a href="{{ '/people.html' | relative_url }}">People</a></li>
+        <li><a href="{{ '/resources.html' | relative_url }}">Tools &amp; data</a></li>
+        <li><a href="{{ '/join-us.html' | relative_url }}">Join us</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">Contact</p>
+      <ul class="footer-links">
+        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li><a href="{{ site.scholar }}">Google Scholar</a></li>
+        <li><a href="{{ site.department_url }}">Department of Microbiology and Immunology</a></li>
+      </ul>
+      <a class="nus-logo" href="https://www.nus.edu.sg/"><img src="{{ '/assets/img/brand/nus-logo-white.png' | relative_url }}" alt="National University of Singapore" width="150" height="68" loading="lazy"></a>
+    </div>
+  </div>
+  <div class="wrap footer-base">
+    <span>© {{ site.time | date: "%Y" }} Sham Lab, National University of Singapore</span>
+    <span class="mono">S. pneumoniae · capsule · envelope · Tn-seq</span>
+  </div>
+</footer>

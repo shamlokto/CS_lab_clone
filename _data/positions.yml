@@ -1,0 +1,32 @@
+# Open positions on the Join Us page. Set `open: false` to hide one.
+- title: Research Fellow
+  open: true
+  body: >-
+    A competitive package will be offered based on experience and track record.
+    Send a CV and contact details for three referees to Chris Sham. Only
+    shortlisted candidates will be notified.
+  requirements:
+    - PhD in microbiology or a related field
+    - Excellent written and spoken English
+    - Highly motivated, self-driven and independent
+    - Curious about science and able to work well in a team
+    - Experience with next-generation sequencing, animal studies, immunology, molecular biology or bacteriology is preferred
+- title: Research Assistant
+  open: true
+  body: >-
+    Work on capsule biogenesis and host-pathogen interactions, supported by the
+    facilities of the lab and the Department of Microbiology and Immunology. A
+    competitive package will be offered based on experience and track record.
+    Send a CV and contact details for three referees to Chris Sham. Only
+    shortlisted candidates will be notified.
+  requirements:
+    - BSc or higher in microbiology or a related field
+    - Excellent written and spoken English
+    - Highly motivated, self-driven and independent
+    - Curious about science and able to work well in a team
+    - Experience with animal studies, vaccinology or bacteriology is preferred
+- title: Students (UROPS, FYP, attachments, internships)
+  open: true
+  body: >-
+    Interested in a project? Email Chris Sham or drop by his office to discuss
+    your ideas.

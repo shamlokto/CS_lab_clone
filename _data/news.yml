@@ -1,0 +1,42 @@
+# Lab news, newest first. `date` can be a year ("2025") or "2025-09".
+# Keep each item to one or two sentences; `link` is optional.
+- date: "2026"
+  tag: Teaching
+  title: Fundamentals, a set of animated primers on bacterial molecular biology
+  body: Twelve click-through primers on topics from DNA replication to CRISPR and Tn-seq, drawn as hand-tinted plates for students.
+  link: https://shamlokto.github.io/fundamentals/
+- date: "2026"
+  tag: Software
+  title: Dual Tn-seq Explorer released as open source
+  body: An interactive app for browsing about 895,000 gene-pair scores from the dual Tn-seq dataset, with GI-profile correlation and SVG export.
+  link: https://github.com/shamlokto/dual-tnseq-explorer
+- date: "2025"
+  tag: Paper
+  title: Dual Tn-seq published in <i>Science</i>
+  body: Justin Zik and colleagues map the genetic interaction landscape of <i>S. pneumoniae</i> across 73% of possible double gene deletions.
+  link: https://www.science.org/doi/10.1126/science.adt7685
+- date: "2025"
+  tag: Paper
+  title: Capsule transporters are more interchangeable than expected
+  body: Wan Zhen Chua and colleagues test nearly 6,000 flippase and cargo combinations in <i>Science Advances</i>.
+  link: https://pubmed.ncbi.nlm.nih.gov/39854462/
+- date: "2025"
+  tag: Paper
+  title: The capsule pathway as a glycoengineering platform
+  body: Cheryl Wong and colleagues describe how the pneumococcal capsule pathway can be used to build glycans, in <i>ACS Bio &amp; Med Chem Au</i>.
+  link: https://pubmed.ncbi.nlm.nih.gov/40556784/
+- date: "2024"
+  tag: People
+  title: Three PhD graduates
+  body: Rei Nakamoto, Su Tong and Chun Ye Yu Jade completed their PhDs in the lab. Congratulations!
+  link: /people.html#alumni
+- date: "2023"
+  tag: Paper
+  title: Capsule synthesis is organised by the divisome
+  body: Rei Nakamoto and colleagues show in <i>Nature Communications</i> that capsule enzymes are recruited to the division ring, not the elongasome.
+  link: https://pubmed.ncbi.nlm.nih.gov/37264013/
+- date: "2023"
+  tag: Paper
+  title: Glycan structure shapes colonisation of human airway cells
+  body: Jade Chun and colleagues link capsule structure to adhesion to respiratory epithelium in <i>PNAS</i>.
+  link: https://pubmed.ncbi.nlm.nih.gov/36943879/

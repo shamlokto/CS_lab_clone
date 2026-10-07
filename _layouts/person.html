@@ -1,0 +1,35 @@
+---
+layout: default
+---
+{% assign m = page %}
+<div class="wrap">
+  <p class="crumbs"><a href="{{ '/people.html' | relative_url }}">People</a>{% if m.group == 'alumni' %} / <a href="{{ '/people.html' | relative_url }}#alumni">Alumni</a>{% endif %} / {{ m.name }}</p>
+  <article class="profile">
+    <aside class="profile-side">
+      <img src="{{ m.photo | relative_url }}" alt="{{ m.name }}">
+      <ul class="contact">
+        {% if m.email %}<li><span class="eyebrow" style="display:block;margin:0">Email</span><a href="mailto:{{ m.email }}">{{ m.email }}</a></li>{% endif %}
+        {% if m.phone %}<li><span class="eyebrow" style="display:block;margin:0">Phone</span><a href="tel:{{ m.phone | remove: ' ' }}">{{ m.phone }}</a></li>{% endif %}
+        {% if m.scholar %}<li><span class="eyebrow" style="display:block;margin:0">Publications</span><a href="{{ m.scholar }}">Google Scholar</a></li>{% endif %}
+      </ul>
+    </aside>
+    <div>
+      <p class="eyebrow">{% if m.group == 'alumni' %}Alumni · {{ m.years }}{% else %}Lab member{% endif %}</p>
+      <h1>{{ m.name }}{% if m.degree %} <span class="muted" style="font-size:.5em;font-family:var(--body)">{{ m.degree }}</span>{% endif %}</h1>
+      <p class="role">{{ m.role }}{% if m.title %} · {{ m.title }}{% endif %}{% if m.now %}<br>Now: {{ m.now }}{% endif %}</p>
+      {% if m.interests and m.interests.size > 0 %}
+      <h2>Research interests</h2>
+      <div class="prose">{% for p in m.interests %}<p>{{ p }}</p>{% endfor %}</div>
+      {% endif %}
+      {% if m.education and m.education.size > 0 %}
+      <h2>Education</h2>
+      <ul class="edu">{% for e in m.education %}<li>{{ e }}</li>{% endfor %}</ul>
+      {% endif %}
+      {{ content }}
+      {% if m.group == 'pi' %}
+      <h2>Publications</h2>
+      <p><a href="{{ '/publications.html' | relative_url }}">Lab publications</a>, including earlier work on cell wall synthesis and division.</p>
+      {% endif %}
+    </div>
+  </article>
+</div>

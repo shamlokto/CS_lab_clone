@@ -1,0 +1,8 @@
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">{{ include.eyebrow }}</p>
+    <h1>{{ include.title }}</h1>
+    {% if include.lede %}<p class="lede">{{ include.lede }}</p>{% endif %}
+  </div>
+  <div class="track" data-track="{{ include.seed | default: include.title | size }}" aria-hidden="true"></div>
+</section>
