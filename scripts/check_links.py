@@ -2,15 +2,24 @@
 """Check that every internal link and image in a built site resolves.
 
 Usage: python3 scripts/check_links.py _site [--baseurl /CS_lab_clone]
+
+Without --baseurl, the base path is read from the stylesheet link in
+index.html, so the check works whatever path the site is built for.
 """
 import argparse, os, re, sys
 from urllib.parse import urlparse, unquote
 
 ap = argparse.ArgumentParser()
 ap.add_argument("site")
-ap.add_argument("--baseurl", default="")
+ap.add_argument("--baseurl")
 args = ap.parse_args()
 root = os.path.abspath(args.site)
+if args.baseurl is None:
+    index = open(os.path.join(root, "index.html"), encoding="utf-8").read()
+    m = re.search(r'href="([^"]*)/assets/css/site\.css', index)
+    args.baseurl = m.group(1) if m else ""
+    print(f"baseurl: {args.baseurl or '(none)'}")
+args.baseurl = args.baseurl.rstrip("/")
 attr = re.compile(r'(?:href|src)="([^"#?]+)')
 ids = {}
 bad = []
