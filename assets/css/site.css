@@ -358,19 +358,23 @@ a.card:hover { transform: translateY(-3px); border-color: var(--accent); box-sha
 .empty.show { display: block; }
 
 /* ---------- People ---------- */
-.pi-card { display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: start; }
+.pi-card { display: grid; grid-template-columns: 380px 1fr; gap: 40px; align-items: start; }
 .pi-card img { border-radius: var(--radius); aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; width: 100%; border: 1px solid var(--line); }
-@media (max-width: 760px) { .pi-card { grid-template-columns: 1fr; } .pi-card img { max-width: 280px; } }
-.people-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+@media (max-width: 860px) { .pi-card { grid-template-columns: 1fr; } .pi-card img { max-width: 340px; } }
+.people-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 28px 24px; }
 .person { text-decoration: none; color: inherit; display: block; }
 .person-photo { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 5; background: var(--surface-2); border: 1px solid var(--line); }
 .person-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; transition: transform .4s ease; }
 a.person:hover .person-photo img { transform: scale(1.04); }
 a.person:hover .person-name { color: var(--accent); }
-.person-name { font-weight: 600; font-size: 16.5px; margin: 12px 0 2px; line-height: 1.3; }
+.person-name { font-weight: 600; font-size: 18px; margin: 12px 0 2px; line-height: 1.3; }
 .person-role { font-size: 14px; color: var(--muted); margin: 0; }
 .person-years { font-family: var(--mono); font-size: 12.5px; color: var(--accent); margin: 4px 0 0; }
-.person-now { font-size: 13.5px; color: var(--muted); margin: 4px 0 0; }
+.person-photo .initials {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  font-family: var(--display); font-size: 64px; color: var(--accent);
+  background: radial-gradient(circle at 50% 40%, var(--accent-soft), transparent 70%), var(--surface-2);
+}
 .group-title { display: flex; align-items: baseline; gap: 12px; margin: 54px 0 20px; }
 .group-title h2 { margin: 0; font-size: 28px; }
 .group-title .count { font-family: var(--mono); font-size: 13px; color: var(--muted); }
