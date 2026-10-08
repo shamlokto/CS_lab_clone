@@ -1,11 +1,6 @@
 # Lab news, newest first. `date` can be a year ("2025") or "2025-09".
 # Keep each item to one or two sentences; `link` is optional.
 - date: "2026"
-  tag: Teaching
-  title: Fundamentals, a set of animated primers on bacterial molecular biology
-  body: Twelve click-through primers on topics from DNA replication to CRISPR and Tn-seq, drawn as hand-tinted plates for students.
-  link: https://shamlokto.github.io/fundamentals/
-- date: "2026"
   tag: Software
   title: Dual Tn-seq Explorer released as open source
   body: An interactive app for browsing about 895,000 gene-pair scores from the dual Tn-seq dataset, with GI-profile correlation and SVG export.
