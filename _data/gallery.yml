@@ -1,5 +1,7 @@
 # Gallery photos, newest first. Files live in assets/img/gallery/ (full size)
 # and assets/img/gallery/thumb/ (640 px). Run scripts/optimize_images.py to make both.
+- { file: lab-image26, caption: "Goodbye, Shih Jen! You will be dearly missed!!!" }
+- { file: lab-image27, caption: "Goodbye, Shih Jen! You will be dearly missed!!!" }
 - { file: lab-image25, caption: "Lab lunch", year: 2026 }
 - { file: lab-image24, caption: "Celebratory dinner at CLOVE", year: 2024 }
 - { file: lab-image23, caption: "Rei's farewell", year: 2024 }
