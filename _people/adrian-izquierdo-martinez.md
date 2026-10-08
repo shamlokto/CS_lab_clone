@@ -1,5 +1,5 @@
 ---
-name: "Adrian"
+name: "Adrian Izquierdo Martinez"
 role: "Postdoctoral Fellow"
 group: "postdoc"
 order: 5.5

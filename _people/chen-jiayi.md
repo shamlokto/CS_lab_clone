@@ -2,6 +2,7 @@
 name: "Chen Jiayi"
 role: "Master's Student"
 order: 12.5
+years: "2026"
 photo: "/assets/img/people/chen-jiayi.webp"
 group: "alumni"
 email: "e1520707@u.nus.edu"
