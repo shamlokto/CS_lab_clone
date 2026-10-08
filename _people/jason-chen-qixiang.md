@@ -2,6 +2,7 @@
 name: "Jason Chen Qixiang"
 role: "Undergraduate Student"
 order: 12.6
+years: "2025–2026"
 photo: "/assets/img/people/jason-chen-qixiang.webp"
 group: "alumni"
 email: "e0968884@u.nus.edu"
