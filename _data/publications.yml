@@ -7,6 +7,24 @@
 # listed in `lab_authors` below.
 
 lab:
+  - title: The WalRK two-component system in <i>Streptococcus pneumoniae</i> ensures robustness of secondary wall polymer attachment
+    authors: Justin J. Zik, Zeyu Fu, Morgan N. Price, Yujie Li, Yuan Qiao, Adam P. Arkin, Adam M. Deutschbauer, Josue Flores-Kim, Lok-To Sham
+    journal: mBio
+    details: "17 (8): e0107526"
+    year: 2026
+    url: https://doi.org/10.1128/mbio.01075-26
+    doi: 10.1128/mbio.01075-26
+    topics: [envelope, systems]
+
+  - title: Investigation of the essential role of capsular polysaccharide in serotype 1 <i>Streptococcus pneumoniae</i>
+    authors: Terra VS, Nasher F, Ramos-Sevillano E, Tan SY, Smith AA, Sham LT, Brown JS, Wren BW
+    journal: Frontiers in Cellular and Infection Microbiology
+    details: "16: 1835100"
+    year: 2026
+    url: https://doi.org/10.3389/fcimb.2026.1835100
+    doi: 10.3389/fcimb.2026.1835100
+    topics: [envelope]
+
   - title: Dual transposon sequencing profiles the genetic interaction landscape in bacteria
     authors: Justin J. Zik, Morgan N. Price, Keisha Hanifa Alma Mayra, Audrey A. Santoso, Adam P. Arkin, Adam M. Deutschbauer, Lok-To Sham
     journal: Science
@@ -170,6 +188,8 @@ topics:
 # Names (as they appear in author lists) to highlight as lab members.
 lab_authors:
   - Lok-To Sham
+  - Zeyu Fu
+  - Tan SY
   - Sham LT
   - Justin J. Zik
   - Wan-Zhen Chua
