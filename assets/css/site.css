@@ -405,13 +405,14 @@ a.person:hover .person-name { color: var(--accent); }
 .resource .stats-row { display: flex; flex-wrap: wrap; gap: 6px; }
 
 /* ---------- Gallery ---------- */
-.gallery { columns: 3 300px; column-gap: 16px; }
+/* Row-by-row grid so the newest photos read first, left to right */
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
 .gallery button {
-  all: unset; cursor: zoom-in; display: block; break-inside: avoid; margin: 0 0 16px;
+  all: unset; cursor: zoom-in; display: block; margin: 0;
   border-radius: var(--radius); overflow: hidden; position: relative; border: 1px solid var(--line); width: 100%;
 }
 .gallery button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-.gallery img { width: 100%; transition: transform .4s ease; }
+.gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .4s ease; }
 .gallery button:hover img { transform: scale(1.03); }
 .gallery .cap {
   position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 12px 10px;

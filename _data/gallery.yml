@@ -1,4 +1,5 @@
-# Gallery photos, newest first. Files live in assets/img/gallery/ (full size)
+# Gallery photos, newest first; the page shows them in this order.
+# Photos without a year are kept below the dated ones they follow. Files live in assets/img/gallery/ (full size)
 # and assets/img/gallery/thumb/ (640 px). Run scripts/optimize_images.py to make both.
 - { file: lab-image26, caption: "Goodbye, Shih Jen! You will be dearly missed!!!" }
 - { file: lab-image27, caption: "Goodbye, Shih Jen! You will be dearly missed!!!" }
@@ -13,12 +14,12 @@
 - { file: lab-image16, caption: "Farewell lunch for Rachel and Liu Yao", year: 2023 }
 - { file: lab-image19, caption: "Lunch with Mrs. Phoon", year: 2023 }
 - { file: lab-image18, caption: "Celebrating Jade's paper", year: 2023 }
-- { file: lab-image12, caption: "Bridging science and art: Streptococcus pneumoniae by baby artists" }
 - { file: lab-image13, caption: "BUG 10th anniversary symposium", year: 2022 }
 - { file: lab-image9, caption: "Farewell lunch for Metta", year: 2022 }
 - { file: lab-image10, caption: "Department tea break", year: 2022 }
 - { file: lab-image15, caption: "Lab lunch", year: 2022 }
 - { file: lab-image4, caption: "The lab at NUS" }
+- { file: lab-image12, caption: "Bridging science and art: Streptococcus pneumoniae by baby artists" }
 - { file: lab-image2, caption: "Lab lunch" }
 - { file: lab-image3, caption: "Wan Zhen's birthday" }
 - { file: lab-image5, caption: "Joe and Stella's farewell" }
