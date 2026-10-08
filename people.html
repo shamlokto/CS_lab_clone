@@ -38,7 +38,7 @@ redirect_from:
 <section class="section alt" id="alumni" style="scroll-margin-top:70px">
   <div class="wrap">
     {% assign alumni = people | where: "group", "alumni" %}
-    <div class="section-head"><div><p class="eyebrow">Alumni</p><h2>Where our people went</h2><p>Former lab members, newest first.</p></div></div>
+    <div class="section-head"><div><p class="eyebrow">Alumni</p><h2>They will be dearly missed</h2><p>Former lab members, newest first. Thank you for all you brought to the lab.</p></div></div>
     <div class="people-grid">{% for m in alumni %}{% include person-card.html person=m %}{% endfor %}</div>
     <div class="group-title"><h2>Undergraduate trainees</h2><span class="count">{{ site.data.trainees.size }}</span></div>
     <ul class="trainees">

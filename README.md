@@ -36,11 +36,11 @@ The site is built with [Jekyll](https://jekyllrb.com/), which GitHub Pages runs 
    ---
    ```
 
-The profile page appears at `/people/jane-tan/`.
+The profile page appears at `/people/jane-tan/`. Until you have a photo and details, leave out `photo` and add `placeholder: true`: the card shows the person's initials and the profile says "Profile coming soon".
 
 ### Move someone to alumni
 
-In their `_people/*.md` file, set `group: "alumni"`, add `years: "2021–2025"` and, optionally, `now: "Postdoc, Somewhere University"`.
+In their `_people/*.md` file, set `group: "alumni"` and add `years: "2021–2025"`.
 
 ### Add a paper
 
